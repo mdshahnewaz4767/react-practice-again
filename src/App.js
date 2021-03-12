@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import './App.css';
 import MealDetails from './components/MealDetails/MealDetails';
+import MealFinder from './components/MealDetails/MealFinder/MealFinder';
 
 function App() {
 
@@ -29,11 +30,12 @@ function App() {
     .then(res => res.json())
     .then(data => {
       setRandomUser(data.results[0])
-      console.log(data.results[0]);
+      // console.log(data.results[0]);
     })
   }, [])
   return (
     <div className="App">
+      <MealFinder></MealFinder>
       <MealDetails></MealDetails>
       <h1>{singleUser.name}</h1>
       <h1>Random Gender: {randomUser.gender}</h1>
