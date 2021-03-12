@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import './App.css';
+import MealDetails from './components/MealDetails/MealDetails';
 
 function App() {
 
@@ -33,6 +34,7 @@ function App() {
   }, [])
   return (
     <div className="App">
+      <MealDetails></MealDetails>
       <h1>{singleUser.name}</h1>
       <h1>Random Gender: {randomUser.gender}</h1>
       <h1>Random Name: {randomUser.name && randomUser.name.first}</h1>
